@@ -3,19 +3,15 @@ package br.com.dominio.controller;
 import java.io.IOException;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class FuncionarioController
- */
+@WebServlet(urlPatterns = {"/Controller", "/main"})
 public class FuncionarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Default constructor.
-	 */
 	public FuncionarioController() {
 		// TODO Auto-generated constructor stub
 	}

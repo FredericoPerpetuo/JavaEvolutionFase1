@@ -5,9 +5,15 @@
 	;
 
 :root { 
+	--strong-gray-blue: #2F5182;
 	--gray-blue: #4476bd; 
-	--salmon: #f47169; 
+	--salmon : #f47169;
 	--gray: #dcdcdc;
+	--salmon: #f47169;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -18,7 +24,6 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Montserrat', sans-serif;
 }
 
 .box {
@@ -32,21 +37,38 @@
 	box-shadow: 3px 3px 5px #808080;
 }
 
-.box h1 {
-	font-size: 3rem;
-	text-transform: uppercase;
-	font-weight: bold;
-	padding: 1rem;
-	color: var(--gray-blue);
-	/*text-shadow: 0.5px 0.5px #000;*/
-}
-
 .box figure {
 	width: 60%;
 }
 
 .box figure img {
 	max-width: 100%;
+}
+
+.big-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 80%;
+	min-height: 80vh;
+	background: #fff;
+	padding: 3rem;
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px #808080;
+}
+
+h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 1rem;
+	color: var(--gray-blue);
+}
+
+.menu{
+	display: flex;
+	width: 20%;
+	justify-content: space-between;
 }
 
 .botaoA {
@@ -62,5 +84,21 @@
 
 .botaoA:hover {
 	background-color: var(--salmon);
+	transition: 0.5s;
+}
+
+.botaoB {
+	margin-top: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+	background-color: var(--gray-blue);
+	padding: 1rem;
+	color: #fff;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.botaoB:hover {
+	background-color: var(--strong-gray-blue);
 	transition: 0.5s;
 }

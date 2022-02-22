@@ -24,7 +24,8 @@ public class FuncionarioController extends HttpServlet {
 			throws ServletException, IOException {
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
+		//Teste de conexão
+		funcionarioDAO.testeConexao();
 	}
 
 	

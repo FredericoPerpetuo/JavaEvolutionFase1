@@ -9,31 +9,25 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/Controller", "/main"})
+@WebServlet(urlPatterns = { "/Controller", "/funcionarios" })
 public class FuncionarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 
 	public FuncionarioController() {
-		
+
 	}
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		//Teste de conexao
-		funcionarioDAO.testeConexao();
+		String action = request.getServletPath();
+		if (action.equals("/funcionarios")) {
+			getFuncionarios(request, response);
+		}
 	}
 
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	protected void getFuncionarios(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doGet(request, response);
+		response.sendRedirect("funcionarios.jsp");
 	}
-	
-	
 
 }
